@@ -1,23 +1,19 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, ExternalLink, Sparkles } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import { products } from "../data/products";
 
 export default function ProductsPage() {
   return (
     <div className="section-py" style={{ minHeight: "80vh" }}>
       <div className="container">
-        {/* Header - Styled consistently with Ringkasan showcase */}
+        {/* Header */}
         <div className="showcase-header-card" style={{ display: "block", marginBottom: "36px" }}>
-          <div className="ios-badge ios-badge-silver" style={{ marginBottom: "12px" }}>
-            <Sparkles size={11} />
-            <span>Katalog Produk &bull; Sistem Digital</span>
-          </div>
           <h1 className="section-title" style={{ fontSize: "28px", fontWeight: 800, letterSpacing: "-0.03em", marginBottom: "8px" }}>
-            Semua Produk
+            All Projects
           </h1>
-          <p style={{ fontSize: "14.5px", color: "var(--text-secondary)", lineHeight: 1.65, margin: 0, maxWidth: "680px" }}>
-            Daftar aplikasi dan sistem yang telah dibangun dan diimplementasikan untuk kebutuhan nyata.
+          <p style={{ fontSize: "14.5px", color: "var(--text-secondary)", lineHeight: 1.65, margin: 0, maxWidth: "640px" }}>
+            Software and systems built and deployed for real-world usage.
           </p>
         </div>
 
@@ -29,7 +25,7 @@ export default function ProductsPage() {
               className="ios-card"
               style={{ display: "flex", flexDirection: "column", height: "100%" }}
             >
-              {/* Product Thumbnail (Clean without top badges) */}
+              {/* Product Thumbnail */}
               <div style={{ position: "relative", height: "230px", overflow: "hidden", borderBottom: "1px solid var(--border-subtle)", background: "#0a0a0d" }}>
                 <Image
                   src={product.gallery[0].src}
@@ -45,7 +41,7 @@ export default function ProductsPage() {
                   {product.name}
                 </h2>
 
-                <p style={{ fontSize: "14.5px", color: "var(--text-secondary)", lineHeight: 1.65, marginBottom: "20px", flex: 1 }}>
+                <p style={{ fontSize: "14px", color: "var(--text-secondary)", lineHeight: 1.65, marginBottom: "20px", flex: 1 }}>
                   {product.summary}
                 </p>
 
@@ -69,7 +65,7 @@ export default function ProductsPage() {
                     className="btn-ios btn-ios-solid"
                     style={{ fontSize: "13px", padding: "8px 18px" }}
                   >
-                    <span>Detail Produk</span>
+                    <span>Details</span>
                     <ArrowRight size={13} />
                   </Link>
 
@@ -80,9 +76,9 @@ export default function ProductsPage() {
                       rel="noopener noreferrer"
                       className="btn-ios btn-ios-glass"
                       style={{ fontSize: "12px", padding: "8px 14px" }}
-                      title="Buka website"
+                      title="Visit live site"
                     >
-                      <span>Website</span>
+                      <span>Live Site</span>
                       <ExternalLink size={12} />
                     </a>
                   )}

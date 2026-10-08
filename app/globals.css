@@ -1,51 +1,49 @@
 /* ==========================================================================
-   wellyfishy Portfolio - White Primary with Black Accents (iOS Frosted Glassmorphism)
-   Light, Ethereal, Super Clean Apple-style Aesthetics
+   wellyfishy Portfolio - Refined Glassmorphism
+   Clean, Luminous, Premium Light Aesthetic
    ========================================================================== */
 
 :root {
-  /* White Primary Palette with Authentic iOS Glassmorphism */
+  /* Surface and Background */
   --bg-body: #f8fafc;
   --bg-surface: rgba(255, 255, 255, 0.72);
   --bg-surface-elevated: rgba(255, 255, 255, 0.88);
   --bg-card: rgba(255, 255, 255, 0.72);
   --bg-card-hover: rgba(255, 255, 255, 0.85);
 
-  /* Text - High Contrast */
+  /* Text Colors */
   --text-primary: #09090b;
-  --text-secondary: #27272a;
-  --text-muted: #52525b;
+  --text-secondary: #3f3f46;
+  --text-muted: #71717a;
   --text-inverse: #ffffff;
 
   /* Specular Glass Borders */
   --border-glass: rgba(255, 255, 255, 0.85);
   --border-glass-hover: rgba(255, 255, 255, 1);
-  --border-subtle: rgba(0, 0, 0, 0.08);
-  --border-medium: rgba(0, 0, 0, 0.16);
+  --border-subtle: rgba(0, 0, 0, 0.06);
+  --border-medium: rgba(0, 0, 0, 0.12);
   --border-strong: #09090b;
 
-  /* Deep iOS Frosted Blurs */
-  --blur-ios: blur(32px) saturate(190%);
-  --blur-card: blur(36px) saturate(190%);
+  /* Frosted Glass Blurs */
+  --blur-ios: blur(24px) saturate(170%);
+  --blur-card: blur(28px) saturate(170%);
 
-  /* Apple-style Frosted Glass Specular Shadows */
+  /* Balanced Glass Shadows */
   --shadow-ios-card: 
-    inset 0 1.5px 1px 0 rgba(255, 255, 255, 1),
-    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.03),
-    0 12px 36px -4px rgba(0, 0, 0, 0.08),
-    0 2px 8px -1px rgba(0, 0, 0, 0.04);
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.9),
+    0 10px 30px -4px rgba(15, 23, 42, 0.04),
+    0 2px 6px -1px rgba(15, 23, 42, 0.02);
   --shadow-ios-card-hover: 
-    inset 0 1.5px 1px 0 rgba(255, 255, 255, 1),
-    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.04),
-    0 20px 48px -6px rgba(0, 0, 0, 0.13),
-    0 4px 14px -2px rgba(0, 0, 0, 0.06);
+    inset 0 1px 1.5px 0 rgba(255, 255, 255, 1),
+    0 18px 40px -6px rgba(15, 23, 42, 0.08),
+    0 4px 12px -2px rgba(15, 23, 42, 0.04);
 
   /* Radii */
   --radius-pill: 9999px;
   --radius-sm: 10px;
   --radius-md: 16px;
-  --radius-lg: 24px;
-  --radius-xl: 32px;
+  --radius-lg: 22px;
+  --radius-xl: 28px;
   --container-max: 1040px;
 }
 
@@ -72,66 +70,45 @@ body {
   position: relative;
 }
 
-/* Apple-like iOS 27 Fluid Iridescent Wallpaper Background (Living Animation) */
+/* Refined Pure CSS Luminous Mesh Gradient Background */
 body::before {
   content: "";
   position: fixed;
-  top: -6%;
-  left: -6%;
-  width: 112%;
-  height: 112%;
-  background-image: 
-    linear-gradient(to bottom, rgba(248, 250, 252, 0.40) 0%, rgba(248, 250, 252, 0.66) 100%),
-    url('/images/apple-ios-wallpaper.jpg');
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse 70% 55% at 15% 10%, rgba(219, 234, 254, 0.7) 0%, transparent 60%),
+    radial-gradient(ellipse 65% 50% at 85% 15%, rgba(233, 213, 255, 0.65) 0%, transparent 60%),
+    radial-gradient(ellipse 75% 60% at 50% 65%, rgba(224, 242, 254, 0.55) 0%, transparent 65%),
+    radial-gradient(ellipse 60% 50% at 80% 90%, rgba(243, 232, 255, 0.5) 0%, transparent 60%),
+    var(--bg-body);
   z-index: -2;
   pointer-events: none;
-  animation: iosWallpaperFloat 22s ease-in-out infinite alternate;
-  will-change: transform;
 }
 
-/* Luminous Ambient Chromatic Aura (Living Breathing Light Mesh) */
+/* Subtle Organic Ambient Float */
 body::after {
   content: "";
   position: fixed;
   inset: 0;
   background-image: 
-    radial-gradient(circle at 18% 25%, rgba(216, 180, 254, 0.28) 0%, transparent 45%),
-    radial-gradient(circle at 82% 35%, rgba(191, 219, 254, 0.3) 0%, transparent 45%),
-    radial-gradient(circle at 45% 75%, rgba(244, 114, 182, 0.18) 0%, transparent 50%),
-    radial-gradient(circle at 75% 85%, rgba(196, 181, 253, 0.25) 0%, transparent 40%);
+    radial-gradient(circle at 25% 35%, rgba(199, 210, 254, 0.22) 0%, transparent 50%),
+    radial-gradient(circle at 75% 45%, rgba(186, 230, 253, 0.25) 0%, transparent 50%),
+    radial-gradient(circle at 45% 85%, rgba(233, 213, 255, 0.2) 0%, transparent 55%);
   z-index: -1;
   pointer-events: none;
-  animation: iosAuraBreathe 16s ease-in-out infinite alternate;
-  will-change: opacity, transform;
+  animation: ambientFloat 26s ease-in-out infinite alternate;
+  will-change: transform;
 }
 
-@keyframes iosWallpaperFloat {
+@keyframes ambientFloat {
   0% {
     transform: scale(1) translate3d(0, 0, 0);
   }
   50% {
-    transform: scale(1.035) translate3d(-1%, -0.8%, 0);
+    transform: scale(1.025) translate3d(-1%, 0.8%, 0);
   }
   100% {
-    transform: scale(1.02) translate3d(0.8%, 0.6%, 0);
-  }
-}
-
-@keyframes iosAuraBreathe {
-  0% {
-    opacity: 0.65;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.95;
-    transform: scale(1.04);
-  }
-  100% {
-    opacity: 0.72;
-    transform: scale(0.98);
+    transform: scale(1.01) translate3d(0.8%, -0.8%, 0);
   }
 }
 
@@ -160,7 +137,7 @@ a {
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Strengthened iOS Frosted Glass Card */
+/* Frosted Glass Card */
 .ios-card {
   background: var(--bg-card);
   border: 1px solid var(--border-glass);
@@ -180,48 +157,43 @@ a {
   transform: translateY(-2px);
 }
 
-/* Strengthened iOS Glass Badge */
+/* Glass Badges */
 .ios-badge {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 6px 14px;
+  padding: 5px 12px;
   border-radius: var(--radius-pill);
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -0.01em;
-  background: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.78);
   border: 1px solid rgba(255, 255, 255, 0.95);
   backdrop-filter: var(--blur-ios);
   -webkit-backdrop-filter: var(--blur-ios);
-  box-shadow: 
-    inset 0 1px 1px rgba(255, 255, 255, 1),
-    0 2px 8px rgba(0, 0, 0, 0.04);
-  color: #0f172a;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+  color: #18181b;
 }
 
-/* Silver Gradient Frosted Badge */
 .ios-badge-dark, .ios-badge-silver {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(241, 245, 249, 0.85) 50%, rgba(226, 232, 240, 0.9) 100%);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: var(--blur-ios);
   -webkit-backdrop-filter: var(--blur-ios);
-  border: 1px solid rgba(255, 255, 255, 0.98);
-  box-shadow: 
-    inset 0 1px 1.5px rgba(255, 255, 255, 1),
-    inset 0 -1px 1px rgba(0, 0, 0, 0.03),
-    0 4px 12px rgba(15, 23, 42, 0.06);
-  color: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  color: #334155;
+  font-weight: 550;
 }
 
-/* iOS Buttons (Silver Gradient Glassmorphism) */
+/* Buttons */
 .btn-ios {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 10px 22px;
+  padding: 9px 20px;
   border-radius: var(--radius-pill);
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 600;
   letter-spacing: -0.01em;
   cursor: pointer;
@@ -231,59 +203,45 @@ a {
 }
 
 .btn-ios-solid {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(241, 245, 249, 0.88) 50%, rgba(226, 232, 240, 0.92) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.98);
-  color: #0f172a;
-  box-shadow: 
-    inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 1),
-    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.04),
-    0 6px 18px -2px rgba(15, 23, 42, 0.08),
-    0 2px 6px -1px rgba(15, 23, 42, 0.04);
+  background: #09090b;
+  border: 1px solid #18181b;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(9, 9, 11, 0.12);
 }
 .btn-ios-solid:hover {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(248, 250, 252, 0.95) 50%, rgba(241, 245, 249, 0.98) 100%);
-  border-color: rgba(255, 255, 255, 1);
+  background: #27272a;
+  border-color: #3f3f46;
+  color: #ffffff;
   transform: translateY(-1px);
-  box-shadow: 
-    inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 1),
-    0 10px 24px -2px rgba(15, 23, 42, 0.12),
-    0 4px 10px -2px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 8px 18px rgba(9, 9, 11, 0.18);
 }
 
 .btn-ios-glass {
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.76);
   backdrop-filter: var(--blur-ios);
   -webkit-backdrop-filter: var(--blur-ios);
-  border: 1px solid rgba(255, 255, 255, 0.9);
-  color: #334155;
-  box-shadow: 
-    inset 0 1px 1px rgba(255, 255, 255, 1),
-    0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.92);
+  color: #27272a;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 1), 0 2px 8px rgba(0, 0, 0, 0.03);
 }
 .btn-ios-glass:hover {
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.95);
   border-color: rgba(255, 255, 255, 1);
-  color: #0f172a;
+  color: #09090b;
   transform: translateY(-1px);
-  box-shadow: 
-    inset 0 1px 1px rgba(255, 255, 255, 1),
-    0 4px 14px rgba(0, 0, 0, 0.08);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 1), 0 6px 16px rgba(0, 0, 0, 0.06);
 }
 
-/* Intense Frosted Glass Hero Card */
+/* Hero Glass Card */
 .hero-glass-card {
-  background: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.68);
   border: 1.5px solid rgba(255, 255, 255, 0.92);
   border-radius: var(--radius-xl);
-  backdrop-filter: blur(44px) saturate(210%);
-  -webkit-backdrop-filter: blur(44px) saturate(210%);
-  box-shadow: 
-    inset 0 2px 2px 0 rgba(255, 255, 255, 1),
-    inset 0 -1px 2px 0 rgba(0, 0, 0, 0.03),
-    0 20px 50px -10px rgba(15, 23, 42, 0.08),
-    0 6px 16px -2px rgba(15, 23, 42, 0.04);
-  padding: 52px 36px;
-  max-width: 860px;
+  backdrop-filter: var(--blur-card);
+  -webkit-backdrop-filter: var(--blur-card);
+  box-shadow: var(--shadow-ios-card);
+  padding: 48px 36px;
+  max-width: 820px;
   margin: 0 auto;
   text-align: center;
   position: relative;
@@ -292,134 +250,26 @@ a {
 
 /* Metallic Sheen Name Gradient */
 .hero-name-gradient {
-  background: linear-gradient(135deg, #09090b 20%, #334155 55%, #64748b 85%, #94a3b8 100%);
+  background: linear-gradient(135deg, #09090b 20%, #334155 60%, #64748b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
   letter-spacing: -0.04em;
 }
 
-/* Hero Focus Skill Chips */
-.hero-focus-tags {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-  margin: 20px auto 0 auto;
-  max-width: 660px;
-}
-
-.hero-focus-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 5px 13px;
-  border-radius: var(--radius-pill);
-  font-size: 12px;
-  font-weight: 550;
-  color: #334155;
+/* Showcase Header Card */
+.showcase-header-card {
   background: rgba(255, 255, 255, 0.65);
   border: 1px solid rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
-  transition: all 0.2s ease;
-}
-
-.hero-focus-pill:hover {
-  background: rgba(255, 255, 255, 0.9);
-  color: #0f172a;
-  transform: translateY(-1px);
-}
-
-/* Hero Quick Stats Grid (Fills empty spaces with high impact) */
-.hero-stats-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  margin-top: 34px;
-  padding-top: 28px;
-  border-top: 1px solid rgba(0, 0, 0, 0.07);
-}
-
-.hero-stat-card {
-  background: rgba(255, 255, 255, 0.55);
-  border: 1px solid rgba(255, 255, 255, 0.9);
-  border-radius: var(--radius-md);
-  padding: 16px 18px;
-  text-align: left;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  box-shadow: 
-    inset 0 1px 1.5px rgba(255, 255, 255, 0.95),
-    0 4px 12px rgba(15, 23, 42, 0.03);
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.hero-stat-card:hover {
-  background: rgba(255, 255, 255, 0.85);
-  border-color: rgba(255, 255, 255, 1);
-  transform: translateY(-2px);
-  box-shadow: 
-    inset 0 1px 2px rgba(255, 255, 255, 1),
-    0 8px 20px rgba(15, 23, 42, 0.06);
-}
-
-.hero-stat-number {
-  font-size: 22px;
-  font-weight: 800;
-  color: #09090b;
-  letter-spacing: -0.03em;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin-bottom: 2px;
-}
-
-.hero-stat-label {
-  font-size: 13px;
-  font-weight: 650;
-  color: #1e293b;
-  margin-bottom: 3px;
-}
-
-.hero-stat-desc {
-  font-size: 11.5px;
-  color: #64748b;
-  line-height: 1.45;
-}
-
-/* Showcase Header Frosted Glass Card */
-.showcase-header-card {
-  background: rgba(255, 255, 255, 0.68);
-  border: 1.5px solid rgba(255, 255, 255, 0.92);
   border-radius: var(--radius-xl);
-  backdrop-filter: blur(40px) saturate(200%);
-  -webkit-backdrop-filter: blur(40px) saturate(200%);
-  box-shadow: 
-    inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 1),
-    0 12px 36px -4px rgba(15, 23, 42, 0.06);
-  padding: 30px 36px;
+  backdrop-filter: var(--blur-card);
+  -webkit-backdrop-filter: var(--blur-card);
+  box-shadow: var(--shadow-ios-card);
+  padding: 28px 32px;
   margin-bottom: 28px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
 }
 
-.showcase-header-left {
-  max-width: 600px;
-}
-
-.showcase-header-right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 8px;
-}
-
-/* Live Heartbeat Green Dot Animation */
+/* Live Status Dot */
 @keyframes liveHeartbeat {
   0% {
     box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
@@ -441,7 +291,7 @@ a {
   border-radius: 50%;
   background: #22c55e;
   display: inline-block;
-  animation: liveHeartbeat 1.8s ease-in-out infinite;
+  animation: liveHeartbeat 2s ease-in-out infinite;
   flex-shrink: 0;
 }
 
@@ -461,7 +311,7 @@ a {
   letter-spacing: -0.01em;
 }
 
-/* Navigation Bar - Floating iOS Capsule (Light Frosted Glass) */
+/* Navigation Bar - Floating Capsule */
 .nav-capsule-wrap {
   position: sticky;
   top: 18px;
@@ -473,19 +323,19 @@ a {
 .nav-capsule {
   max-width: 680px;
   margin: 0 auto;
-  height: 52px;
+  height: 50px;
   padding: 0 18px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(255, 255, 255, 0.76);
+  background: rgba(255, 255, 255, 0.78);
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-pill);
   backdrop-filter: var(--blur-ios);
   -webkit-backdrop-filter: var(--blur-ios);
   box-shadow: 
-    inset 0 1.5px 1px 0 rgba(255, 255, 255, 1),
-    0 12px 32px rgba(0, 0, 0, 0.08);
+    inset 0 1px 1px 0 rgba(255, 255, 255, 1),
+    0 10px 28px rgba(0, 0, 0, 0.06);
 }
 
 .nav-logo {
@@ -516,7 +366,7 @@ a {
 
 /* Sections */
 .section-py {
-  padding: 64px 0;
+  padding: 56px 0;
 }
 
 .section-title {
@@ -533,17 +383,100 @@ a {
 
 /* Footer */
 .footer-wrap {
-  border-top: 1px solid var(--border-glass);
-  padding: 38px 0;
+  border-top: 1px solid var(--border-subtle);
+  padding: 36px 0;
   margin-top: 60px;
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: var(--blur-ios);
   -webkit-backdrop-filter: var(--blur-ios);
 }
 
+/* Profile & Timeline Branching */
+.profile-card {
+  padding: 36px 32px;
+}
+
+.profile-header-layout {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.profile-avatar-img {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+  object-fit: cover;
+  background: #f1f5f9;
+  flex-shrink: 0;
+}
+
+.timeline-branch {
+  position: relative;
+  padding-left: 28px;
+  border-left: 2px solid rgba(0, 0, 0, 0.08);
+  margin-left: 10px;
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 28px;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 4px;
+}
+
+.timeline-node {
+  position: absolute;
+  left: -35px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #09090b;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-node-accent {
+  background: #09090b;
+}
+
+.achievement-card {
+  display: flex;
+  gap: 14px;
+  padding: 18px 20px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  transition: all 0.2s ease;
+  align-items: flex-start;
+}
+
+.achievement-icon-box {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: rgba(15, 23, 42, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--text-primary);
+}
+
+.achievement-card:hover {
+  background: rgba(255, 255, 255, 0.85);
+  transform: translateY(-1px);
+}
+
 @media (max-width: 640px) {
   .section-py {
-    padding: 44px 0;
+    padding: 40px 0;
   }
   .section-title {
     font-size: 22px;
@@ -553,7 +486,7 @@ a {
     top: 12px;
   }
   .nav-capsule {
-    height: 48px;
+    height: 46px;
     padding: 0 14px;
   }
   .nav-logo {
@@ -572,19 +505,18 @@ a {
     padding: 0 16px;
   }
   .hero-glass-card {
-    padding: 36px 20px;
-  }
-  .hero-stats-grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
-    margin-top: 26px;
-    padding-top: 22px;
+    padding: 32px 18px;
   }
   .showcase-header-card {
+    padding: 22px 18px;
+  }
+  .profile-card {
     padding: 24px 20px;
   }
-  .showcase-header-right {
-    align-items: flex-start;
-    width: 100%;
+  .profile-header-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
   }
 }

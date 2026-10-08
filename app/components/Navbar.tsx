@@ -27,12 +27,17 @@ export default function Navbar() {
           <ul className="nav-menu" style={{ justifyContent: "flex-end" }}>
             <li className="nav-item-hide-mobile">
               <Link href="/" className={pathname === "/" ? "active" : ""}>
-                Ringkasan
+                Home
               </Link>
             </li>
             <li>
               <Link href="/products" className={pathname.startsWith("/products") ? "active" : ""}>
-                Produk
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link href="/profile" className={pathname.startsWith("/profile") ? "active" : ""}>
+                Profile
               </Link>
             </li>
             <li>

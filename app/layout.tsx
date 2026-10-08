@@ -11,27 +11,26 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://wellyfishy.ambrilindo.com"),
-  title: "wellyfishy | Software Engineer - Portfolio",
+  title: "wellyfishy | Fullstack Developer",
   description:
-    "Portfolio & Systems Showcase by wellyfishy (wellyfishy.ambrilindo.com). Specializing in realtime tournament scoring engines, distributed web applications, and resilient offline-first systems.",
+    "Portfolio of wellyfishy. Fullstack developer building realtime tournament engines, offline-first systems, and web applications.",
   keywords: [
     "wellyfishy",
     "Portfolio",
-    "Ambrilindo",
-    "Sports Technology",
-    "Realtime Scoring System",
-    "Software Engineer",
+    "Fullstack Developer",
     "Django",
-    "Next.js"
+    "Next.js",
+    "Tournament Management",
+    "Realtime Scoring"
   ],
   authors: [{ name: "wellyfishy", url: "https://wellyfishy.ambrilindo.com" }],
   openGraph: {
-    title: "wellyfishy | Software Engineer - Portfolio",
+    title: "wellyfishy | Fullstack Developer",
     description:
-      "Crafting high-performance realtime tournament systems, resilient local-first engines, and distributed web applications.",
+      "Fullstack developer building realtime tournament engines, offline-first systems, and web applications.",
     url: "https://wellyfishy.ambrilindo.com",
     siteName: "wellyfishy Portfolio",
-    locale: "id_ID",
+    locale: "en_US",
     type: "website",
   },
 };
@@ -42,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="id" className={inter.className}>
+    <html lang="en" className={inter.className}>
       <body>
         <Navbar />
         <main style={{ flex: 1 }}>{children}</main>

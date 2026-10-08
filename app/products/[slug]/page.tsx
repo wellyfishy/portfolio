@@ -11,6 +11,8 @@ interface PageProps {
   }>;
 }
 
+export const instant = false;
+
 export async function generateStaticParams() {
   return products.map((product) => ({
     slug: product.slug,
@@ -42,7 +44,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
   return (
     <div className="section-py">
       <div className="container">
-        {/* Back Link (Clean without status badge) */}
+        {/* Back Link */}
         <div style={{ marginBottom: "28px" }}>
           <Link
             href="/products"
@@ -56,11 +58,11 @@ export default async function ProductDetailPage({ params }: PageProps) {
             }}
           >
             <ArrowLeft size={14} />
-            <span>Kembali ke Semua Produk</span>
+            <span>Back to Projects</span>
           </Link>
         </div>
 
-        {/* Hero Header (Clean without top badges) */}
+        {/* Hero Header */}
         <div style={{ maxWidth: "780px", marginBottom: "32px" }}>
           <h1 style={{ fontSize: "clamp(30px, 4.5vw, 44px)", fontWeight: 800, marginBottom: "12px", color: "var(--text-primary)", letterSpacing: "-0.03em", lineHeight: 1.15 }}>
             {product.name}
@@ -79,7 +81,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
                 className="btn-ios btn-ios-solid"
                 style={{ fontSize: "13px", padding: "8px 18px" }}
               >
-                <span>Buka Website ({product.liveUrl.replace("https://", "")})</span>
+                <span>Visit Site ({product.liveUrl.replace("https://", "")})</span>
                 <ExternalLink size={13} />
               </a>
             </div>
@@ -91,10 +93,10 @@ export default async function ProductDetailPage({ params }: PageProps) {
           <ProductGalleryViewer items={product.gallery} />
         </div>
 
-        {/* Ringkasan & Deskripsi */}
+        {/* Overview & Description */}
         <div className="ios-card" style={{ padding: "32px", marginBottom: "32px" }}>
           <h2 style={{ fontSize: "20px", fontWeight: 700, letterSpacing: "-0.02em", color: "var(--text-primary)", marginBottom: "14px" }}>
-            Tentang Aplikasi
+            About
           </h2>
           <div style={{ display: "flex", flexDirection: "column", gap: "12px", fontSize: "15px", color: "var(--text-secondary)", lineHeight: 1.7 }}>
             {product.overview.map((para, i) => (
@@ -103,10 +105,10 @@ export default async function ProductDetailPage({ params }: PageProps) {
           </div>
         </div>
 
-        {/* Fitur Utama */}
+        {/* Features */}
         <div style={{ marginBottom: "36px" }}>
           <h2 style={{ fontSize: "20px", fontWeight: 700, letterSpacing: "-0.02em", color: "var(--text-primary)", marginBottom: "18px" }}>
-            Fitur Utama
+            Key Features
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "18px" }}>
             {product.features.map((feat) => (
@@ -122,10 +124,10 @@ export default async function ProductDetailPage({ params }: PageProps) {
           </div>
         </div>
 
-        {/* Teknologi yang Digunakan */}
+        {/* Tech Stack */}
         <div className="ios-card" style={{ padding: "26px", marginBottom: "40px" }}>
           <h3 style={{ fontSize: "16px", fontWeight: 700, color: "var(--text-primary)", marginBottom: "14px" }}>
-            Teknologi
+            Tech Stack
           </h3>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
             {product.techStack.map((tech) => (
@@ -140,7 +142,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
           </div>
         </div>
 
-        {/* Next Product Navigation (Card Typography Aligned) */}
+        {/* Next Product Navigation */}
         {nextProduct && (
           <div
             className="ios-card"
@@ -156,7 +158,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
           >
             <div>
               <div style={{ fontSize: "11.5px", color: "var(--text-muted)", fontWeight: 600, letterSpacing: "0.04em", textTransform: "uppercase" }}>
-                Produk Lainnya
+                Next Project
               </div>
               <div style={{ fontSize: "20px", fontWeight: 700, letterSpacing: "-0.02em", color: "var(--text-primary)", marginTop: "3px" }}>
                 {nextProduct.name}
@@ -168,7 +170,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
               className="btn-ios btn-ios-solid"
               style={{ fontSize: "13px", padding: "8px 20px" }}
             >
-              <span>Lihat {nextProduct.name}</span>
+              <span>View {nextProduct.name}</span>
               <ArrowRight size={14} />
             </Link>
           </div>
