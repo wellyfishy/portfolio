@@ -75,7 +75,7 @@ export default function ProfilePage() {
               </div>
 
               <p className="profile-bio">
-                Co-Founder at <Link href="/products/ambrilindo" style={{ textDecoration: "underline", fontWeight: 500 }}>Ambrilindo</Link>. 6 years of experience building web platforms, offline-first tournament scoring engines, and backend services with Python, TypeScript, and Linux.
+                Co-Founder at <Link href="/products/ambrilindo" style={{ textDecoration: "underline", fontWeight: 500 }}>Ambrilindo</Link> &amp; Tournament Committee (Komisi Pertandingan) at Pengprov FORKI Kalimantan Timur. 6 years of experience building web platforms, offline-first tournament scoring engines, and backend services with Python, TypeScript, and Linux.
               </p>
 
               {/* Action Buttons */}
@@ -251,7 +251,7 @@ export default function ProfilePage() {
                       Tournament Committee (Komisi Pertandingan)
                     </h3>
                     <div className="timeline-company">
-                      FORKI Kalimantan Timur
+                      Pengprov FORKI Kalimantan Timur
                     </div>
                   </div>
                   <div className="timeline-date-badge">
@@ -261,9 +261,18 @@ export default function ProfilePage() {
                 </div>
 
                 <ul className="timeline-list">
-                  <li>Managed scoring table operations and verified athlete credentials for regional karate championships.</li>
-                  <li>Replaced manual recording flows with digital score tallying to streamline match scheduling and reduce errors.</li>
+                  <li>Appointed to the provincial tournament committee (Pengprov FORKI Kaltim) in recognition of extensive technical and operational contributions to modernizing regional karate championships.</li>
+                  <li>Spearheaded digital scoring adoption and real-time match management across regional and provincial tournaments, transitioning venues away from manual paper tallying.</li>
+                  <li>Supervised scoring table operations, credential verification, and match scheduling for major official championships across East Kalimantan.</li>
                 </ul>
+
+                <div style={{ display: "flex", flexWrap: "wrap", gap: "5px" }}>
+                  {["Sports Technology", "Tournament Operations", "Match Coordination", "FORKI Kaltim"].map((skill) => (
+                    <span key={skill} className="ios-badge" style={{ fontSize: "10.5px", padding: "2px 8px" }}>
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
 
