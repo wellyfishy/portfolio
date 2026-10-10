@@ -392,15 +392,16 @@ a {
 }
 
 /* Profile & Timeline Branching */
-.profile-card {
-  padding: 36px 32px;
+.profile-card,
+.profile-section-card {
+  padding: 32px 30px;
+  margin-bottom: 24px;
 }
 
 .profile-header-layout {
   display: flex;
   gap: 24px;
   align-items: flex-start;
-  margin-bottom: 24px;
 }
 
 .profile-avatar-img {
@@ -414,16 +415,68 @@ a {
   flex-shrink: 0;
 }
 
+.profile-name-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.profile-name {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+
+.profile-handle {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.profile-role-title {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.profile-location {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.profile-bio {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.profile-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Timeline */
 .timeline-branch {
   position: relative;
   padding-left: 28px;
   border-left: 2px solid rgba(0, 0, 0, 0.08);
-  margin-left: 10px;
+  margin-left: 8px;
 }
 
 .timeline-item {
   position: relative;
-  padding-bottom: 28px;
+  padding-bottom: 26px;
 }
 
 .timeline-item:last-child {
@@ -433,7 +486,7 @@ a {
 .timeline-node {
   position: absolute;
   left: -35px;
-  top: 4px;
+  top: 5px;
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -444,6 +497,84 @@ a {
 
 .timeline-node-accent {
   background: #09090b;
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.timeline-role-name {
+  font-size: 15.5px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.timeline-company {
+  font-size: 13.5px;
+  font-weight: 550;
+  color: var(--text-secondary);
+}
+
+.timeline-date-badge {
+  font-size: 12px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.timeline-list {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  padding-left: 18px;
+  margin: 8px 0 10px 0;
+}
+
+/* Education */
+.edu-block {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.edu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.edu-meta {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* Technical Stack Rows */
+.tech-stack-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.tech-stack-label {
+  font-weight: 650;
+  color: var(--text-primary);
+  min-width: 120px;
+  flex-shrink: 0;
+}
+
+.tech-stack-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 
 .achievement-card {
@@ -476,7 +607,7 @@ a {
 
 @media (max-width: 640px) {
   .section-py {
-    padding: 40px 0;
+    padding: 36px 0;
   }
   .section-title {
     font-size: 22px;
@@ -510,13 +641,87 @@ a {
   .showcase-header-card {
     padding: 22px 18px;
   }
-  .profile-card {
-    padding: 24px 20px;
+  .profile-card,
+  .profile-section-card {
+    padding: 22px 18px;
+    margin-bottom: 18px;
   }
   .profile-header-layout {
     flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 14px;
+  }
+  .profile-avatar-img {
+    width: 76px;
+    height: 76px;
+  }
+  .profile-name {
+    font-size: 21px;
+  }
+  .profile-role-title {
+    font-size: 13.5px;
+  }
+  .profile-bio {
+    font-size: 13.5px;
+  }
+  .profile-actions {
+    gap: 6px;
+  }
+  .profile-actions .btn-ios {
+    font-size: 12px !important;
+    padding: 6px 12px !important;
+  }
+  .timeline-branch {
+    padding-left: 18px;
+    margin-left: 4px;
+  }
+  .timeline-node {
+    left: -24px;
+    width: 10px;
+    height: 10px;
+    border-width: 2px;
+  }
+  .timeline-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+  .timeline-date-badge {
+    margin-top: 2px;
+    font-size: 11.5px;
+  }
+  .timeline-list {
+    padding-left: 16px;
+    font-size: 13px;
+  }
+  .edu-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .edu-meta {
+    text-align: left;
+    display: flex;
     align-items: center;
-    text-align: center;
-    gap: 16px;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 2px;
+  }
+  .edu-meta div {
+    margin-top: 0 !important;
+  }
+  .tech-stack-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .tech-stack-label {
+    min-width: auto;
+    font-size: 13px;
+  }
+  .achievement-card {
+    padding: 14px;
+    gap: 12px;
   }
 }

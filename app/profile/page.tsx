@@ -44,7 +44,7 @@ export default function ProfilePage() {
       <div className="container" style={{ maxWidth: "820px" }}>
         
         {/* 1. Clean Profile Header Card */}
-        <div className="ios-card profile-card" style={{ marginBottom: "24px" }}>
+        <div className="ios-card profile-card">
           <div className="profile-header-layout">
             <Image
               src="/images/welly.webp"
@@ -56,30 +56,30 @@ export default function ProfilePage() {
             />
 
             <div style={{ flex: 1, minWidth: 0 }}>
-              <div style={{ display: "flex", alignItems: "baseline", gap: "8px", flexWrap: "wrap", marginBottom: "3px" }}>
-                <h1 style={{ fontSize: "24px", fontWeight: 800, color: "var(--text-primary)", letterSpacing: "-0.03em" }}>
+              <div className="profile-name-row">
+                <h1 className="profile-name">
                   Welly Setia Rahman
                 </h1>
-                <span style={{ fontSize: "13.5px", color: "var(--text-muted)", fontWeight: 500 }}>
+                <span className="profile-handle">
                   @wellyfishy
                 </span>
               </div>
 
-              <div style={{ fontSize: "14.5px", fontWeight: 600, color: "var(--text-secondary)", marginBottom: "6px" }}>
+              <div className="profile-role-title">
                 Software Engineer &bull; Full-Stack Developer
               </div>
 
-              <div style={{ display: "flex", alignItems: "center", gap: "5px", fontSize: "13px", color: "var(--text-muted)", marginBottom: "14px" }}>
+              <div className="profile-location">
                 <MapPin size={13} />
                 <span>Samarinda, East Kalimantan, Indonesia</span>
               </div>
 
-              <p style={{ fontSize: "14px", lineHeight: 1.65, color: "var(--text-secondary)", marginBottom: "16px" }}>
+              <p className="profile-bio">
                 Co-Founder at <Link href="/products/ambrilindo" style={{ textDecoration: "underline", fontWeight: 500 }}>Ambrilindo</Link>. 6 years of experience building web platforms, offline-first tournament scoring engines, and backend services with Python, TypeScript, and Linux.
               </p>
 
               {/* Action Buttons */}
-              <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
+              <div className="profile-actions">
                 <a
                   href="mailto:wellysetiarahman2806@gmail.com"
                   className="btn-ios btn-ios-solid"
@@ -116,7 +116,7 @@ export default function ProfilePage() {
         </div>
 
         {/* 2. Experience & Career (Clean Timeline Branching) */}
-        <div className="ios-card" style={{ padding: "28px", marginBottom: "24px" }}>
+        <div className="ios-card profile-section-card">
           <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "22px" }}>
             <Briefcase size={17} style={{ color: "var(--text-primary)" }} />
             <h2 style={{ fontSize: "18px", fontWeight: 700, color: "var(--text-primary)" }}>
@@ -130,25 +130,25 @@ export default function ProfilePage() {
             <div className="timeline-item">
               <span className="timeline-node timeline-node-accent" />
               <div>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "6px", marginBottom: "3px" }}>
+                <div className="timeline-header">
                   <div>
-                    <h3 style={{ fontSize: "15.5px", fontWeight: 700, color: "var(--text-primary)" }}>
+                    <h3 className="timeline-role-name">
                       Co-Founder &amp; Lead Software Engineer
                     </h3>
-                    <div style={{ fontSize: "13.5px", fontWeight: 550, color: "var(--text-secondary)" }}>
+                    <div className="timeline-company">
                       <Link href="/products/ambrilindo" style={{ textDecoration: "underline" }}>
                         Ambrilindo
                       </Link>{" "}
                       (ambrilindo.com)
                     </div>
                   </div>
-                  <div style={{ fontSize: "12px", color: "var(--text-muted)", display: "flex", alignItems: "center", gap: "4px" }}>
+                  <div className="timeline-date-badge">
                     <Calendar size={12} />
                     <span>2020 – Present</span>
                   </div>
                 </div>
 
-                <ul style={{ fontSize: "13.5px", lineHeight: 1.65, color: "var(--text-secondary)", paddingLeft: "18px", margin: "8px 0 10px 0" }}>
+                <ul className="timeline-list">
                   <li>Built the tournament engine handling on-site operations for 20+ championships (400–2,000 athletes each).</li>
                   <li>Developed live TV scoreboards, referee scoring consoles, and automated bracket generators over an offline LAN stack.</li>
                   <li>Managed match-day Linux server deployments with zero downtime during live tournament finals.</li>
@@ -168,22 +168,22 @@ export default function ProfilePage() {
             <div className="timeline-item">
               <span className="timeline-node" />
               <div>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "6px", marginBottom: "3px" }}>
+                <div className="timeline-header">
                   <div>
-                    <h3 style={{ fontSize: "15.5px", fontWeight: 700, color: "var(--text-primary)" }}>
+                    <h3 className="timeline-role-name">
                       Full-Stack Developer
                     </h3>
-                    <div style={{ fontSize: "13.5px", fontWeight: 550, color: "var(--text-secondary)" }}>
+                    <div className="timeline-company">
                       Freelance
                     </div>
                   </div>
-                  <div style={{ fontSize: "12px", color: "var(--text-muted)", display: "flex", alignItems: "center", gap: "4px" }}>
+                  <div className="timeline-date-badge">
                     <Calendar size={12} />
                     <span>2020 – Present</span>
                   </div>
                 </div>
 
-                <ul style={{ fontSize: "13.5px", lineHeight: 1.65, color: "var(--text-secondary)", paddingLeft: "18px", margin: "8px 0 10px 0" }}>
+                <ul className="timeline-list">
                   <li>Built custom web applications using Python (Django, FastAPI) and PHP (Laravel).</li>
                   <li>Designed REST APIs, optimized SQL queries, and implemented Redis caching for low-latency responses.</li>
                   <li>Handled end-to-end delivery: requirements, Figma UI design, and production Linux deployment with Docker and Nginx.</li>
@@ -199,26 +199,68 @@ export default function ProfilePage() {
               </div>
             </div>
 
-            {/* Role 3: FORKI */}
+            {/* Role 3: UMKT Internship */}
             <div className="timeline-item">
               <span className="timeline-node" />
               <div>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "6px", marginBottom: "3px" }}>
+                <div className="timeline-header">
                   <div>
-                    <h3 style={{ fontSize: "15.5px", fontWeight: 700, color: "var(--text-primary)" }}>
+                    <h3 className="timeline-role-name">
+                      Junior Developer (Intern)
+                    </h3>
+                    <div className="timeline-company">
+                      <a
+                        href="https://umkt.ac.id"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ textDecoration: "underline" }}
+                      >
+                        Universitas Muhammadiyah Kalimantan Timur (UMKT)
+                      </a>
+                    </div>
+                  </div>
+                  <div className="timeline-date-badge">
+                    <Calendar size={12} />
+                    <span>2024</span>
+                  </div>
+                </div>
+
+                <ul className="timeline-list">
+                  <li>Developed and maintained university web platforms and academic services using Python and Django.</li>
+                  <li>Built backend models, views, and REST API endpoints integrated with responsive web interfaces.</li>
+                  <li>Collaborated with the university IT team on database query optimizations, bug fixes, and feature enhancements.</li>
+                </ul>
+
+                <div style={{ display: "flex", flexWrap: "wrap", gap: "5px" }}>
+                  {["Python", "Django", "JavaScript", "REST APIs", "Git"].map((skill) => (
+                    <span key={skill} className="ios-badge" style={{ fontSize: "10.5px", padding: "2px 8px" }}>
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Role 4: FORKI */}
+            <div className="timeline-item">
+              <span className="timeline-node" />
+              <div>
+                <div className="timeline-header">
+                  <div>
+                    <h3 className="timeline-role-name">
                       Tournament Committee (Komisi Pertandingan)
                     </h3>
-                    <div style={{ fontSize: "13.5px", fontWeight: 550, color: "var(--text-secondary)" }}>
+                    <div className="timeline-company">
                       FORKI Kalimantan Timur
                     </div>
                   </div>
-                  <div style={{ fontSize: "12px", color: "var(--text-muted)", display: "flex", alignItems: "center", gap: "4px" }}>
+                  <div className="timeline-date-badge">
                     <Calendar size={12} />
                     <span>2025 – Present</span>
                   </div>
                 </div>
 
-                <ul style={{ fontSize: "13.5px", lineHeight: 1.65, color: "var(--text-secondary)", paddingLeft: "18px", margin: "8px 0 0 0" }}>
+                <ul className="timeline-list">
                   <li>Managed scoring table operations and verified athlete credentials for regional karate championships.</li>
                   <li>Replaced manual recording flows with digital score tallying to streamline match scheduling and reduce errors.</li>
                 </ul>
@@ -229,7 +271,7 @@ export default function ProfilePage() {
         </div>
 
         {/* 3. Education & Honors (Combined, High-Density) */}
-        <div className="ios-card" style={{ padding: "28px", marginBottom: "24px" }}>
+        <div className="ios-card profile-section-card">
           <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "20px" }}>
             <GraduationCap size={17} style={{ color: "var(--text-primary)" }} />
             <h2 style={{ fontSize: "18px", fontWeight: 700, color: "var(--text-primary)" }}>
@@ -238,8 +280,8 @@ export default function ProfilePage() {
           </div>
 
           {/* Politeknik Negeri Samarinda */}
-          <div style={{ paddingBottom: "20px", marginBottom: "20px", borderBottom: "1px solid var(--border-subtle)" }}>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "8px", marginBottom: "4px" }}>
+          <div className="edu-block">
+            <div className="edu-header">
               <div>
                 <h3 style={{ fontSize: "16px", fontWeight: 700, color: "var(--text-primary)" }}>
                   Politeknik Negeri Samarinda
@@ -248,7 +290,7 @@ export default function ProfilePage() {
                   Associate Degree (D3) in Informatics Engineering
                 </div>
               </div>
-              <div style={{ textAlign: "right" }}>
+              <div className="edu-meta">
                 <span className="ios-badge ios-badge-silver" style={{ fontWeight: 700, fontSize: "11.5px" }}>
                   GPA 3.87 / 4.00
                 </span>
@@ -315,7 +357,7 @@ export default function ProfilePage() {
         </div>
 
         {/* 4. Compact Technical Stack */}
-        <div className="ios-card" style={{ padding: "26px 28px" }}>
+        <div className="ios-card profile-section-card">
           <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "16px" }}>
             <Layers size={17} style={{ color: "var(--text-primary)" }} />
             <h2 style={{ fontSize: "18px", fontWeight: 700, color: "var(--text-primary)" }}>
@@ -323,10 +365,10 @@ export default function ProfilePage() {
             </h2>
           </div>
 
-          <div style={{ display: "flex", flexDirection: "column", gap: "10px", fontSize: "13.5px" }}>
-            <div style={{ display: "flex", alignItems: "baseline", gap: "12px", flexWrap: "wrap" }}>
-              <span style={{ fontWeight: 650, color: "var(--text-primary)", minWidth: "120px" }}>Languages</span>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "12px", fontSize: "13.5px" }}>
+            <div className="tech-stack-row">
+              <span className="tech-stack-label">Languages</span>
+              <div className="tech-stack-badges">
                 {["Python", "JavaScript (ES6+)", "PHP", "SQL", "HTML5 / CSS3"].map((item) => (
                   <span key={item} className="ios-badge" style={{ fontSize: "11px", padding: "2px 8px" }}>
                     {item}
@@ -335,9 +377,9 @@ export default function ProfilePage() {
               </div>
             </div>
 
-            <div style={{ display: "flex", alignItems: "baseline", gap: "12px", flexWrap: "wrap" }}>
-              <span style={{ fontWeight: 650, color: "var(--text-primary)", minWidth: "120px" }}>Frameworks</span>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
+            <div className="tech-stack-row">
+              <span className="tech-stack-label">Frameworks</span>
+              <div className="tech-stack-badges">
                 {["Django", "FastAPI", "Next.js", "React", "Laravel", "Tailwind CSS"].map((item) => (
                   <span key={item} className="ios-badge" style={{ fontSize: "11px", padding: "2px 8px" }}>
                     {item}
@@ -346,9 +388,9 @@ export default function ProfilePage() {
               </div>
             </div>
 
-            <div style={{ display: "flex", alignItems: "baseline", gap: "12px", flexWrap: "wrap" }}>
-              <span style={{ fontWeight: 650, color: "var(--text-primary)", minWidth: "120px" }}>Infrastructure</span>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
+            <div className="tech-stack-row">
+              <span className="tech-stack-label">Infrastructure</span>
+              <div className="tech-stack-badges">
                 {["PostgreSQL", "MySQL", "Redis", "Docker", "Linux (Ubuntu)", "Nginx", "Git / GitHub"].map((item) => (
                   <span key={item} className="ios-badge" style={{ fontSize: "11px", padding: "2px 8px" }}>
                     {item}
@@ -357,9 +399,9 @@ export default function ProfilePage() {
               </div>
             </div>
 
-            <div style={{ display: "flex", alignItems: "baseline", gap: "12px", flexWrap: "wrap" }}>
-              <span style={{ fontWeight: 650, color: "var(--text-primary)", minWidth: "120px" }}>Tools &amp; Design</span>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
+            <div className="tech-stack-row">
+              <span className="tech-stack-label">Tools &amp; Design</span>
+              <div className="tech-stack-badges">
                 {["Figma", "Canva", "REST APIs"].map((item) => (
                   <span key={item} className="ios-badge" style={{ fontSize: "11px", padding: "2px 8px" }}>
                     {item}
