@@ -81,6 +81,77 @@ export const products: Product[] = [
     status: "Active in Production"
   },
   {
+    slug: "ambrilindo-vr",
+    name: "Ambrilindo VR",
+    tagline: "High-performance multi-camera video review & instant replay for WKF karate officiating",
+    category: "Video Review & Desktop Engine",
+    role: "Systems & Software Developer",
+    timeline: "2026 - Present",
+    badge: "Desktop / Rust",
+    summary:
+      "High-performance, low-latency multi-camera video review and instant replay desktop application designed for World Karate Federation (WKF) Kumite and Kata tournament officiating. Built entirely in Rust using egui and native Windows Media Foundation.",
+    overview: [
+      "Engineered in Rust using egui / eframe to deliver real-time 60 FPS multi-camera monitoring, sub-frame master epoch synchronization, and instantaneous multi-angle replay on referee laptops with zero external dependencies.",
+      "Implements an in-memory circular RAM ring buffer with strict memory caps, enabling instant O(1) random-access scrubbing across the last 60–90 seconds of match action without SSD wear or disk bottlenecks.",
+      "Features dual-display officiating with an independent second-monitor referee window (F2), side-by-side compare mode (C), and vector drawing telestration for analyzing disputed scoring calls.",
+      "Compiled into a standalone AmbrilindoVR.exe binary utilizing native Windows Media Foundation OS APIs, hotplug detection, and watchdog supervision."
+    ],
+    features: [
+      {
+        title: "Multi-Camera Synchronized Monitoring",
+        description: "Flexible layout presets (1x1, 1x2, 2x2, 3x2, 2x4) monitoring up to 8 cameras concurrently with USB auto-assignment, hotplug detection, and watchdog supervision."
+      },
+      {
+        title: "Instant Multi-Angle Replay",
+        description: "Synchronized multi-camera playback tied to master capture epochs with sub-frame timecode, precision stepping (-10F, -1F, +1F, +10F), variable speed presets, and looping review."
+      },
+      {
+        title: "Tournament Session Recording",
+        description: "Bundles all active camera angles into cohesive review sessions with lock protection, inline session renaming, and compact MJPEG containerization."
+      },
+      {
+        title: "Dual-Display & Vector Telestration",
+        description: "Independent second-monitor referee window (F2) with clean distraction-free video output, compare mode (C), and on-screen drawing overlays for line, arrow, and angle analysis."
+      },
+      {
+        title: "Dynamic Bandwidth & Quality Ladder",
+        description: "Automated bandwidth budgeting and quality downshifting (720p30 to 480p30) to eliminate USB host controller saturation on venue laptops."
+      },
+      {
+        title: "Standalone Portable Architecture",
+        description: "Compiles into a single standalone AmbrilindoVR.exe with zero external runtime DLLs using native Windows Media Foundation APIs."
+      }
+    ],
+    gallery: [
+      {
+        src: "/images/products/ambrilindo-vr-console.png",
+        caption: "Ambrilindo VR multi-camera monitoring console with diagnostics HUD, timeline controls, and session review",
+        tag: "Console & HUD"
+      },
+      {
+        src: "/images/products/ambrilindo-vr-session.png",
+        caption: "Tournament session review card with multi-angle bundling and lock protection",
+        tag: "Session Manager"
+      },
+      {
+        src: "/images/products/ambrilindo-vr-stream.png",
+        caption: "High-precision sub-frame timecode and real-time camera stream monitoring",
+        tag: "Frame Monitor"
+      }
+    ],
+    techStack: [
+      "Rust",
+      "egui / eframe",
+      "Windows Media Foundation",
+      "Win32 API",
+      "Rayon",
+      "SIMD / zune-jpeg",
+      "Multithreading",
+      "MJPEG"
+    ],
+    status: "Active in Production"
+  },
+  {
     slug: "ambrilindo-web",
     name: "Ambrilindo Web Portal",
     tagline: "Public portal for tournament registration & live brackets",

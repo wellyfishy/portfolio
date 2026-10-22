@@ -75,7 +75,7 @@ export default function ProfilePage() {
               </div>
 
               <p className="profile-bio">
-                Co-Founder at <Link href="/products/ambrilindo" style={{ textDecoration: "underline", fontWeight: 500 }}>Ambrilindo</Link> &amp; Tournament Committee (Komisi Pertandingan) at Pengprov FORKI Kalimantan Timur. 6 years of experience building web platforms, offline-first tournament scoring engines, and backend services with Python, TypeScript, and Linux.
+                Co-Founder at <Link href="/products/ambrilindo" style={{ textDecoration: "underline", fontWeight: 500 }}>Ambrilindo</Link> &amp; Tournament Committee (Komisi Pertandingan) at Pengprov FORKI Kalimantan Timur. 6 years of experience building web platforms, offline-first tournament scoring engines, real-time video review systems, and backend services with Rust, Python, TypeScript, and Linux.
               </p>
 
               {/* Action Buttons */}
@@ -151,11 +151,12 @@ export default function ProfilePage() {
                 <ul className="timeline-list">
                   <li>Built the tournament engine handling on-site operations for 20+ championships (400–2,000 athletes each).</li>
                   <li>Developed live TV scoreboards, referee scoring consoles, and automated bracket generators over an offline LAN stack.</li>
+                  <li>Engineered Ambrilindo VR in Rust: a 60 FPS multi-camera video review and instant replay VAR system for WKF referee tournament officiating.</li>
                   <li>Managed match-day Linux server deployments with zero downtime during live tournament finals.</li>
                 </ul>
 
                 <div style={{ display: "flex", flexWrap: "wrap", gap: "5px" }}>
-                  {["Python", "Django", "WebSockets", "SQLite", "Linux", "Nginx"].map((skill) => (
+                  {["Rust", "Python", "Django", "WebSockets", "SQLite", "Linux", "Nginx"].map((skill) => (
                     <span key={skill} className="ios-badge" style={{ fontSize: "10.5px", padding: "2px 8px" }}>
                       {skill}
                     </span>
@@ -378,7 +379,7 @@ export default function ProfilePage() {
             <div className="tech-stack-row">
               <span className="tech-stack-label">Languages</span>
               <div className="tech-stack-badges">
-                {["Python", "JavaScript (ES6+)", "PHP", "SQL", "HTML5 / CSS3"].map((item) => (
+                {["Rust", "Python", "JavaScript (ES6+)", "PHP", "SQL", "HTML5 / CSS3"].map((item) => (
                   <span key={item} className="ios-badge" style={{ fontSize: "11px", padding: "2px 8px" }}>
                     {item}
                   </span>
@@ -389,7 +390,7 @@ export default function ProfilePage() {
             <div className="tech-stack-row">
               <span className="tech-stack-label">Frameworks</span>
               <div className="tech-stack-badges">
-                {["Django", "FastAPI", "Next.js", "React", "Laravel", "Tailwind CSS"].map((item) => (
+                {["Django", "FastAPI", "Next.js", "React", "egui / eframe", "Laravel", "Tailwind CSS"].map((item) => (
                   <span key={item} className="ios-badge" style={{ fontSize: "11px", padding: "2px 8px" }}>
                     {item}
                   </span>
